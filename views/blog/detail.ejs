@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+    <title>Detalji - <%=blog.title%></title>
+</head>
+<body class="container-fluid">
+    <div class="card col-md-6 p-3 m-auto mt-3">
+        <h1 class="card-title"><%=blog.title%></h1>
+        <p class="card-subtitle text-muted mb-2"><i class="bi bi-clock"></i> <%=blog.date.toLocaleDateString().slice(0,-1)%> <%=blog.date.toLocaleTimeString().slice(0,-3)%>, <%=blog.location%></p>
+        <div class="card-body">
+           
+            <p><%=blog.description%></p>
+        </div>
+        <div class="m3">
+            <a href="/" class="btn btn-primary">Vratite se</a>
+            <a href="/blog/update/<%=blog._id%>" class="btn btn-success">Azuriraj</a> 
+            <a href="/blog/deleteProcess/<%=blog._id%>" class="btn btn-danger">Obrisi</a>
+        </div>
+    </div>
+</body>
+</html>

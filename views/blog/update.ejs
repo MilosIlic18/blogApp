@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+    <title>Azuriraj - <%= modelInp.title %></title>
+</head>
+<body>
+    <div class="container-fluid">
+        <main class="col-md-12 col-lg-12 p-5">
+            <form action="/blog/updateProcess/<%= modelInp._id %>" method="post" class="col-md-8 col-lg-3 p-2 m-auto">
+                <div class="m-3">
+                    <input class="form-control" name="title" placeholder="Unesite naziv"
+                    value="<%= modelInp.title %>"/>
+                </div>
+                <div class="m-3">
+                    <textarea class="form-control" name="description" placeholder="Unesite opis"><%= modelInp.description %></textarea>
+                </div>
+                <div class="m-3">
+                    <textarea class="form-control" name="location" placeholder="Unesite lokaciju"><%= modelInp.location %></textarea>
+                </div>
+                <div class="m-3">
+                    <button type="submit" name="title" class="btn btn-primary">Posalji</button>
+                    <a href="/blog/<%= modelInp._id %>" class="btn btn-primary">Vratite se</a>
+
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
